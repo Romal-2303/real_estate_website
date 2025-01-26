@@ -1,0 +1,19 @@
+.mouse-middle-line {
+  animation: updown ease-in-out 1.5s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+
+  @keyframes updown {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(2px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}

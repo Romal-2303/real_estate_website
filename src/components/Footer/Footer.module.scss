@@ -1,0 +1,41 @@
+@use "../../designSystem/library" as *;
+
+.footer {
+  width: 100%;
+  height: 145px;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  font-family: $font-tertiary;
+  background-color: black;
+
+  .terms-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    color: white;
+    cursor: pointer;
+  }
+
+  .copyright-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: white;
+  }
+
+  .icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 1rem;
+    cursor: pointer;
+  }
+}
