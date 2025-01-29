@@ -1,0 +1,12 @@
+.navigation-panel-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 0.4rem;
+
+  .link-container {
+    text-decoration: none;
+    color: black;
+  }
+}

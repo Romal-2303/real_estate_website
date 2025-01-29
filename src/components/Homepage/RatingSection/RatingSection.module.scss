@@ -1,0 +1,72 @@
+@use "../../../designSystem/library" as *;
+
+.rating-section-container {
+  height: 65vh;
+  display: flex;
+  font-family: $font-tertiary;
+  padding-top: 5rem;
+  padding-left: 2rem;
+
+  .rating-number-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+
+    .container-content {
+      .trusted-text {
+        font-size: 64px;
+        span {
+          color: $primary-200;
+        }
+      }
+
+      .content-desc {
+        margin-top: 1rem;
+        color: $gray-1300;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+    }
+
+    .user-rating-number-container {
+      .user-container {
+        display: flex;
+        position: relative;
+        height: 80px;
+
+        .user-circle {
+          height: 55px;
+          width: 55px;
+          border: 4px solid white;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+
+          img {
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .number-container {
+        display: flex;
+        gap: 2rem;
+        .block {
+          .block-title {
+            font-weight: 600;
+            font-size: 24px;
+          }
+
+          .block-desc {
+            font-weight: 300;
+            margin-top: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+}

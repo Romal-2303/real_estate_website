@@ -3,6 +3,7 @@ interface ArrowProps {
   height?: string;
   width?: string;
   rotation?: number;
+  strokeWidth?: number;
 }
 
 const Arrow = ({
@@ -10,6 +11,7 @@ const Arrow = ({
   height = "6",
   width = "9",
   rotation = 0,
+  strokeWidth = 1.5,
 }: ArrowProps) => {
   return (
     <svg
@@ -23,7 +25,7 @@ const Arrow = ({
       <path
         d="M1 1.25L4.5 4.75L8 1.25"
         stroke={color}
-        strokeWidth="1.5"
+        strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"
       />

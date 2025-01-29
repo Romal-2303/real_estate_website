@@ -1,0 +1,15 @@
+.utility-btn-container {
+  background-color: white;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+  display: flex;
+  gap: 2rem;
+  justify-content: end;
+  align-items: center;
+  padding-top: 0.4rem;
+  padding-right: 2rem;
+
+  p {
+    cursor: pointer;
+  }
+}

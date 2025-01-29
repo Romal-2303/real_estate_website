@@ -1,0 +1,76 @@
+@use "../../../../designSystem/library" as *;
+
+.cards-container-wrapper {
+  flex: 1;
+  display: flex;
+
+  .scroll-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.2;
+
+    .scroll-bar-bg {
+      background-color: $gray-900;
+      height: 220px;
+      width: 1px;
+      position: relative;
+
+      .scroll-bar {
+        position: absolute;
+        background-color: black;
+        width: 4px;
+        height: 100px;
+        cursor: pointer;
+        border-radius: 20px;
+        top: -1px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        transition: all linear 0.1s;
+      }
+    }
+  }
+
+  .cards-container {
+    flex: 1;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 100%;
+
+    .card-container {
+      border: 1px solid $gray-900;
+      border-radius: 30px;
+      height: 250px;
+      margin-bottom: 1.5rem;
+      padding: 2rem;
+      z-index: 11;
+      position: relative;
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .icon-container {
+          background-color: $primary-300;
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        p {
+          font-size: 24px;
+        }
+      }
+
+      .card-desc {
+        color: $gray-1300;
+        margin-top: 1.5rem;
+        font-size: 14px;
+      }
+    }
+  }
+}

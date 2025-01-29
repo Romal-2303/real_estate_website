@@ -1,0 +1,135 @@
+@use "../../../designSystem/library" as *;
+
+.testimonials-container {
+  margin-top: 4rem;
+  font-family: $font-tertiary;
+
+  .testimonials-title {
+    text-align: center;
+    font-size: 54px;
+    span {
+      color: $gray-1300;
+    }
+  }
+
+  .bended-carousel-section-wrapper {
+    margin-top: 3rem;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+
+    .bended-carousel-section {
+      position: relative;
+      flex: 1;
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 8rem;
+      height: 100%;
+
+      .card {
+        border: 1px solid $gray-1400;
+        width: 400px;
+        height: 400px;
+        flex: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all linear 0.3s;
+        border-radius: 20px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        .user-testimony {
+          line-height: 24px;
+          letter-spacing: 0.8px;
+          flex: 1;
+        }
+
+        .user-info-container {
+          flex: 0.4;
+          background-color: white;
+          border: 1px solid $gray-1400;
+          border-radius: 20px;
+          border-top-left-radius: 0;
+          display: flex;
+          align-items: center;
+          padding: 0rem 1rem;
+
+          .user-icon-container {
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+          }
+
+          .user-detail {
+            flex: 1;
+            height: 100%;
+            padding: 0rem 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .username {
+              font-weight: 500;
+              color: black;
+            }
+
+            .user-designation {
+              color: $neutral800;
+            }
+          }
+        }
+      }
+
+      .active-card {
+        background-color: $primary-300;
+        color: white;
+        border: none;
+
+        .user-info-container {
+          border: none;
+        }
+      }
+    }
+
+    .arrow-container {
+      flex: 0.1;
+      display: flex;
+      gap: 3rem;
+      justify-content: center;
+
+      div {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $gray-1300;
+        transition: all linear 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $primary-300;
+          border: none;
+
+          svg {
+            path {
+              stroke: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

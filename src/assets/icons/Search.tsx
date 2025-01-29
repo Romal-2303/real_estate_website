@@ -9,7 +9,7 @@ const Search = ({
   color = "white",
   width = "12",
   height = "12",
-  strokeWidth = 2,
+  strokeWidth = 1,
 }: SvgProps) => {
   return (
     <svg

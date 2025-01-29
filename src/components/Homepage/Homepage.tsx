@@ -1,7 +1,15 @@
-import classes from "./Homepage.module.scss";
+import MainSection from "./MainSection/MainSection";
+import RatingSection from "./RatingSection/RatingSection";
+import Testimonials from "./Testimonials/Testimonials";
 
 const Homepage = () => {
-  return <div className={classes["homepage-container"]}></div>;
+  return (
+    <>
+      <MainSection />
+      <RatingSection />
+      <Testimonials />
+    </>
+  );
 };
 
 export default Homepage;

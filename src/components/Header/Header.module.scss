@@ -1,0 +1,23 @@
+@use "../../designSystem/library" as *;
+
+.header-container {
+  height: 50px;
+  display: flex;
+  padding: 0rem 0rem 0rem 2rem;
+  font-family: $font-secondary;
+  background-color: $primary-100;
+  border-top-left-radius: 20px;
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-top: 0.4rem;
+  }
+  .nav-panel-wrapper {
+    flex: 1.5;
+  }
+  .utility-buttons-wrapper {
+    flex: 1.9;
+  }
+}

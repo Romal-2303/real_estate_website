@@ -7,7 +7,6 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
     <div className={classes["default-layout"]}>
       <Header />
       {children}
-      <Footer />
     </div>
   );
 };
