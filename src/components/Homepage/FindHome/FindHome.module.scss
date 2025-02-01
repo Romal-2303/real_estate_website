@@ -1,0 +1,151 @@
+@use "../../../designSystem/library" as *;
+
+.findhome-container {
+  margin-top: 4rem;
+  border-radius: 20px;
+  padding: 3rem 4rem 3rem 4rem;
+  font-family: $font-tertiary;
+  background-color: $gray-1500;
+
+  .section-header {
+    font-size: 64px;
+    text-align: center;
+
+    span {
+      color: $primary-200;
+    }
+  }
+
+  .section-desc {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .filters-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    .filter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      border-radius: 30px;
+      width: 180px;
+      padding: 1rem;
+      border: 0.5px solid $primary-200;
+      cursor: pointer;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    column-gap: 1rem;
+    margin-top: 3rem;
+    padding: 0 4rem;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      border-radius: 20px;
+      background-color: white;
+      padding: 0.5rem;
+
+      .image-container {
+        flex: 1;
+        height: 200px;
+        position: relative;
+
+        .property-tag {
+          position: absolute;
+          top: 1.5rem;
+          left: 0rem;
+          background-color: $primary-300;
+          padding: 0.4rem 1.5rem 0.4rem 1rem;
+          text-align: center;
+          clippath: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+          font-size: 12px;
+          color: white;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-top-right-radius: 20px;
+          border-top-left-radius: 20px;
+        }
+      }
+
+      .card-content-container {
+        flex: 1;
+        padding: 0rem 0.5rem;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+
+        .proeprty-name {
+          font-weight: 500;
+          font-size: 20px;
+        }
+
+        .property-location {
+          display: flex;
+          align-items: end;
+          gap: 0.5rem;
+          font-family: 300;
+          margin-top: 0.7rem;
+          font-size: 14px;
+          color: $gray-1300;
+        }
+
+        .horizontal-separator {
+          width: 100%;
+          height: 1px;
+          background-color: $gray-1000;
+          margin-top: 1rem;
+        }
+
+        .property-details-container {
+          display: flex;
+          align-items: center;
+          margin-top: 1rem;
+          color: $gray-1300;
+          gap: 2rem;
+          word-wrap: nowrap;
+
+          p {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            word-wrap: nowrap;
+          }
+        }
+
+        .price-btn-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 1.5rem;
+
+          .price {
+            font-size: 24px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

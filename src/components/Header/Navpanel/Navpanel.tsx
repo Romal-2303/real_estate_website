@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 
 let navLinkArr = [
   { title: "Home", path: "/" },
-  { title: "About", path: "/" },
-  { title: "Careers", path: "/" },
+  { title: "About", path: "/aboutus" },
+  { title: "Careers", path: "/careers" },
   { title: "Contact Us", path: "/" },
 ];
 

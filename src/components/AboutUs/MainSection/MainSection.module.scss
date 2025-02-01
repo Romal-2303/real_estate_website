@@ -1,0 +1,77 @@
+@use "../../../designSystem/library" as *;
+
+.main-section-container {
+  background-color: $primary-100;
+  border-top-right-radius: 20px;
+  padding: 4rem 2rem 2rem 2rem;
+  margin-top: -1rem;
+
+  .about-us-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: $font-secondary;
+    position: relative;
+    z-index: 2;
+    margin-top: -1rem;
+
+    .small-text {
+      position: relative;
+      z-index: 2;
+      color: $gray-700;
+      font-size: 20px;
+    }
+
+    .big-title {
+      position: relative;
+      z-index: 2;
+      margin-top: 2rem;
+      font-size: 64px;
+      margin-top: 0.2rem;
+      letter-spacing: 2px;
+      line-height: 74px;
+    }
+
+    .illustration-container {
+      position: absolute;
+      right: 0%;
+      z-index: 1;
+      height: 300px;
+    }
+  }
+
+  .video-description-container {
+    margin-top: 10rem;
+    font-family: $font-tertiary;
+
+    .description-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .two-vertical-paras {
+        // color: $orange-100;
+      }
+
+      .explore-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        cursor: pointer;
+      }
+    }
+
+    .video-container {
+      margin-top: 2rem;
+      height: 500px;
+      border-radius: 25px;
+
+      video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.tags-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding: 0rem 1.5rem;
+
+  .tag {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0.5rem 0.8rem;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .active-tag {
+    background-color: black;
+    color: white;
+  }
+}

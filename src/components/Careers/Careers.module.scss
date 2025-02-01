@@ -1,0 +1,135 @@
+@use "../../designSystem/library" as *;
+
+.careers-container {
+  font-family: $font-tertiary;
+  //   padding-top: 4rem;
+
+  .careers-heading-content {
+    padding: 5rem 1.5rem 4rem 1.5rem;
+    background-color: $primary-100;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+
+    .hiring-tag {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1.1px solid black;
+      width: fit-content;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .career-header {
+      margin-top: 1rem;
+      .header {
+        font-size: 64px;
+      }
+
+      .desc {
+        font-size: 18px;
+        margin-top: 1rem;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .jobs-list-container {
+    padding: 0rem 1.5rem;
+    margin-top: 2rem;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.3) 100%
+    );
+    backdrop-filter: blur(100px);
+
+    .horizontal-separator {
+      height: 1px;
+      width: 100%;
+      background-color: $gray-100;
+    }
+
+    .job-list-element {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin: 2.5rem 0rem 2rem 0rem;
+
+      .job-list-element-content {
+        .job-title {
+          font-weight: 500;
+          font-size: 20px;
+        }
+
+        .job-desc {
+          margin-top: 0.5rem;
+        }
+
+        .job-list-tag-container {
+          display: flex;
+          gap: 1rem;
+
+          .remote-tag,
+          .full-time-tag {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.3rem;
+            border: 1.1px solid black;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .apply-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 20px;
+        font-weight: 500;
+        height: fit-content;
+        cursor: pointer;
+      }
+    }
+
+    .horizontal-separator-ele {
+      height: 1px;
+      width: 100%;
+      background-color: $gray-100;
+    }
+
+    .circle-container {
+      position: absolute;
+      z-index: -2;
+      top: 10%;
+      right: 3%;
+      height: 200px;
+      width: 200px;
+      background-color: #fea828e5;
+      border-radius: 50%;
+      filter: blur(10px);
+    }
+
+    .layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+      );
+      backdrop-filter: blur(30px);
+      z-index: -1;
+    }
+  }
+}

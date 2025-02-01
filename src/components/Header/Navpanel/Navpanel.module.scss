@@ -1,3 +1,5 @@
+@use "../../../designSystem/library" as *;
+
 .navigation-panel-container {
   height: 100%;
   display: flex;
@@ -8,5 +10,12 @@
   .link-container {
     text-decoration: none;
     color: black;
+    // border: 1px solid red;
+    height: 24px;
+  }
+
+  .link-container-active {
+    font-weight: 500;
+    border-bottom: 2px solid $primary-300;
   }
 }
