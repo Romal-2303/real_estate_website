@@ -1,0 +1,47 @@
+@use "@/designSystem/library" as *;
+
+.cookie-container {
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $primary-100;
+    padding: 1rem;
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 4rem;
+    font-family: $font-primary;
+
+    .text-conatiner {
+        margin-left: 3rem;
+        width: 65%;
+        word-spacing: 4px;
+        font-size: 17px;
+        letter-spacing: 1.4px;
+    }
+
+    .button-container {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 1rem;
+        padding-left: 2.5rem;
+
+        .accept-button,
+        .ok-button {
+            width: 130px;
+            height: 40px;
+            background-color: $primary-300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+}

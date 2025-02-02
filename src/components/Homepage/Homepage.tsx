@@ -1,3 +1,4 @@
+import BrighterDaysComponent from "../BrighterDaysComponent/BrighterDaysComponent";
 import FindHome from "./FindHome/FindHome";
 import MainSection from "./MainSection/MainSection";
 import RatingSection from "./RatingSection/RatingSection";
@@ -10,6 +11,7 @@ const Homepage = () => {
       <RatingSection />
       <FindHome />
       <Testimonials />
+      <BrighterDaysComponent/>
     </>
   );
 };
