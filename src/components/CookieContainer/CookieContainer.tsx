@@ -7,7 +7,7 @@ import Image from "next/image";
 import CookieImage from "@/assets/Cookie.png";
 
 const CookieContainer = () => {
-  const COOKIE_STORAGE_KEY = "cookieAccepted";
+  const COOKIE_STORAGE_KEY = "cookieAccepted"; 
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
