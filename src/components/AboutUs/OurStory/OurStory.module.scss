@@ -4,17 +4,21 @@
   display: flex;
   margin-top: 6rem;
   font-family: $font-tertiary;
-  padding: 0rem 1rem;
+
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 
   .our-story-content-container {
     flex: 0.6;
     .our-story-tag {
-      border: 1px solid $primary-300;
+      border: 1px solid $orange-100;
       width: fit-content;
       font-size: 12px;
       padding: 0.2rem 0.8rem;
       border-radius: 20px;
-      background-color: $primary-300;
+      background-color: $orange-100;
       color: white;
     }
     .our-story-title {
@@ -40,13 +44,17 @@
 
     .our-story-element-text {
       display: flex;
-      align-items: end;
+      align-items: center;
       gap: 1rem;
       padding-left: 5rem;
 
+      @media screen and (min-width: 300px) and (max-width: 600px) {
+        padding-left: 2rem;
+      }
+
       .big-number {
         font-size: 40px;
-        color: $primary-300;
+        color: $orange-100;
       }
 
       .text {

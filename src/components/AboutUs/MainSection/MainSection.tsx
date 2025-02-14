@@ -1,11 +1,15 @@
+"use client";
+
 import classes from "./MainSection.module.scss";
 import ArrowWithTail from "@/assets/icons/ArrowWithTail";
 import PeopleTalkingIllustration from "@/assets/animations/PeopleTalkingIllustration";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const MainSection = () => {
+  const isMobile = useIsMobile(650);
+
   return (
-    <div className={classes["main-section-container"]}>
-      {" "}
+    <>
       <div className={classes["about-us-title-container"]}>
         <p className={classes["small-text"]}>
           How Redmail help to grew your business
@@ -15,10 +19,17 @@ const MainSection = () => {
           built for collaboration.
         </p>
 
+        {!isMobile && (
+          <div className={classes["illustration-container"]}>
+            <PeopleTalkingIllustration />
+          </div>
+        )}
+      </div>
+      {isMobile && (
         <div className={classes["illustration-container"]}>
           <PeopleTalkingIllustration />
         </div>
-      </div>
+      )}
       <div className={classes["video-description-container"]}>
         <div className={classes["description-container"]}>
           <div className={classes["two-vertical-paras"]}>
@@ -41,7 +52,7 @@ const MainSection = () => {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

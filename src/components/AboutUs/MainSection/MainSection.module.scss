@@ -1,77 +1,94 @@
 @use "../../../designSystem/library" as *;
 
-.main-section-container {
-  background-color: $primary-100;
-  border-top-right-radius: 20px;
-  padding: 4rem 2rem 2rem 2rem;
-  margin-top: -1rem;
+.about-us-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-family: $font-secondary;
+  margin-top: 4rem;
+  position: relative;
+  z-index: 2;
 
-  .about-us-title-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    font-family: $font-secondary;
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    margin-top: 1rem;
+  }
+
+  .small-text {
     position: relative;
     z-index: 2;
-    margin-top: -1rem;
+    color: $gray-700;
+    font-size: 20px;
+  }
 
-    .small-text {
-      position: relative;
-      z-index: 2;
-      color: $gray-700;
-      font-size: 20px;
+  .big-title {
+    position: relative;
+    z-index: 2;
+    margin-top: 2rem;
+    font-size: 64px;
+    margin-top: 0.2rem;
+    letter-spacing: 2px;
+    line-height: 74px;
+
+    @media screen and (min-width: 300px) and (max-width: 400px) {
+      font-size: 44px;
+      line-height: 54px;
     }
 
-    .big-title {
-      position: relative;
-      z-index: 2;
-      margin-top: 2rem;
-      font-size: 64px;
-      margin-top: 0.2rem;
-      letter-spacing: 2px;
-      line-height: 74px;
-    }
-
-    .illustration-container {
-      position: absolute;
-      right: 0%;
-      z-index: 1;
-      height: 300px;
+    @media screen and (min-width: 400px) and (max-width: 600px) {
+      font-size: 54px;
+      line-height: 64px;
     }
   }
 
-  .video-description-container {
-    margin-top: 10rem;
-    font-family: $font-tertiary;
+  .illustration-container {
+    position: absolute;
+    right: 0%;
+    z-index: 1;
+    height: 300px;
+  }
+}
 
-    .description-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+.video-description-container {
+  margin-top: 10rem;
+  font-family: $font-tertiary;
 
-      .two-vertical-paras {
-        // color: $orange-100;
-      }
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    margin-top: 3rem;
+  }
 
-      .explore-btn {
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-        cursor: pointer;
-      }
+  .description-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: 300px) and (max-width: 600px) {
+      flex-direction: column;
+      align-items: start;
+      gap: 1rem;
     }
 
-    .video-container {
-      margin-top: 2rem;
-      height: 500px;
-      border-radius: 25px;
+    .two-vertical-paras {
+      // color: $orange-100;
+    }
 
-      video {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 25px;
-      }
+    .explore-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+    }
+  }
+
+  .video-container {
+    margin-top: 2rem;
+    height: 500px;
+    border-radius: 25px;
+
+    video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 25px;
     }
   }
 }

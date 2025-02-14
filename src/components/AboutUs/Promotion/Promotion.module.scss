@@ -2,17 +2,20 @@
 
 .promotion-container {
   height: 580px;
-  background-color: $gray-1500;
+  background-color: $beige-100;
   width: 100vw;
   margin-left: -1.5rem;
   margin-top: 4rem;
   font-family: $font-tertiary;
-  padding: 0rem 2rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    height: fit-content;
+    margin-left: -1rem;
+  }
 
   .redmail-tag {
     border: 1px solid black;
@@ -34,10 +37,20 @@
     display: flex;
     gap: 4rem;
 
+    @media screen and (min-width: 300px) and (max-width: 600px) {
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
     .block-container {
       .block-title {
         font-size: 30px;
         margin-top: 1rem;
+
+        @media screen and (min-width: 300px) and (max-width: 600px) {
+          margin-top: 0.5rem;
+        }
       }
 
       .block-desc {
