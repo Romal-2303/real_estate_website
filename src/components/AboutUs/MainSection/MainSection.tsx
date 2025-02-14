@@ -9,7 +9,7 @@ const MainSection = () => {
   const isMobile = useIsMobile(650);
 
   return (
-    <>
+    <div className={classes["main-section"]}>
       <div className={classes["about-us-title-container"]}>
         <p className={classes["small-text"]}>
           How Redmail help to grew your business
@@ -52,7 +52,7 @@ const MainSection = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

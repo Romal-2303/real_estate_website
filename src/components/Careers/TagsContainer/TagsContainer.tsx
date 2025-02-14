@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import classes from "./TagsContainer.module.scss";
+import styles from "../../../designSystem/_classes.module.scss";
 
 let tagArr = [
   "View All",
@@ -22,7 +23,7 @@ const TagsContainer = () => {
   };
 
   return (
-    <div className={classes["tags-container"]}>
+    <div className={`${classes["tags-container"]} ${styles["hide-scrollbar"]}`}>
       {tagArr.map((tag, tagIndex) => (
         <div
           key={tagIndex}

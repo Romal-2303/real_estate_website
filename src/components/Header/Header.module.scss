@@ -3,14 +3,19 @@
 .header-container {
   height: 50px;
   display: flex;
-  padding: 0rem 0rem 0rem 2rem;
   font-family: $font-secondary;
   background-color: $primary-100;
   border-top-left-radius: 20px;
+  padding: 0rem 0rem 0rem 2rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
 
   @media screen and (min-width: 300px) and (max-width: 600px) {
-    border-top-right-radius: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0;
     align-items: center;
+    margin-left: 0rem;
+    margin-top: 0;
   }
 
   .logo-container {

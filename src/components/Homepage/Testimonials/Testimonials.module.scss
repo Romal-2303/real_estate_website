@@ -4,16 +4,14 @@
   margin: 4rem 0rem 3rem 0rem;
   font-family: $font-tertiary;
 
-  @media screen and (min-width: 300px) and (max-width: 400px) {
-    margin-top: 3rem;
-  }
-  @media screen and (min-width: 400px) and (max-width: 600px) {
+  @media screen and (min-width: 300px) and (max-width: 600px) {
     margin-top: 3rem;
   }
 
   .testimonials-title {
     text-align: center;
     font-size: 54px;
+    padding: 0rem 2rem;
 
     @media screen and (min-width: 300px) and (max-width: 400px) {
       text-align: start;

@@ -4,10 +4,12 @@
   display: flex;
   margin-top: 6rem;
   font-family: $font-tertiary;
+  padding: 0rem 2rem;
 
   @media screen and (min-width: 300px) and (max-width: 600px) {
     flex-direction: column;
     gap: 2rem;
+    margin-top: 3rem;
   }
 
   .our-story-content-container {
@@ -26,6 +28,15 @@
       font-size: 60px;
       line-height: 70px;
       font-weight: 300;
+
+      @media screen and (min-width: 300px) and (max-width: 400px) {
+        font-size: 50px;
+        line-height: 60px;
+      }
+      @media screen and (min-width: 400px) and (max-width: 600px) {
+        font-size: 54px;
+        line-height: 64px;
+      }
     }
 
     .our-story-desc {
@@ -33,6 +44,13 @@
       margin-top: 2rem;
       width: 400px;
       line-height: 22px;
+
+      @media screen and (min-width: 300px) and (max-width: 400px) {
+        width: 100%;
+      }
+      @media screen and (min-width: 400px) and (max-width: 600px) {
+        width: 100%;
+      }
     }
   }
 
@@ -47,6 +65,7 @@
       align-items: center;
       gap: 1rem;
       padding-left: 5rem;
+      margin: 1rem 0rem;
 
       @media screen and (min-width: 300px) and (max-width: 600px) {
         padding-left: 2rem;
@@ -56,17 +75,12 @@
         font-size: 40px;
         color: $orange-100;
       }
-
-      .text {
-        // margin-top: -0.5rem;
-      }
     }
 
     .separator {
       background-color: black;
       height: 1px;
       width: 100%;
-      margin-top: 1rem;
     }
   }
 }

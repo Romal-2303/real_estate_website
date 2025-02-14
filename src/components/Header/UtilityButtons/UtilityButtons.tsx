@@ -13,7 +13,7 @@ let navLinkArr = [
   { title: "About Us", icon: <></>, path: "/aboutus" },
   { title: "Reviews", icon: <></>, path: "/" },
   { title: "Products", icon: <></>, path: "/aboutus" },
-  { title: "Career", icon: <></>, path: "/career" },
+  { title: "Careers", icon: <></>, path: "/careers" },
 ];
 
 const UtilityButtons = () => {

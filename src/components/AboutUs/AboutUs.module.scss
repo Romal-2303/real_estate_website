@@ -1,9 +1,9 @@
 @use "../../designSystem/library" as *;
 
 .about-us-container {
-  padding: 1rem 0rem;
+  padding: 0rem 1rem;
 
   @media screen and (min-width: 300px) and (max-width: 600px) {
-    padding: 0rem;
+    padding: 0;
   }
 }

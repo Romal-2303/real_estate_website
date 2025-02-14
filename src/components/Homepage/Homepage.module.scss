@@ -1,0 +1,7 @@
+.homepage-container {
+  padding: 0rem 1rem;
+
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    padding: 0;
+  }
+}

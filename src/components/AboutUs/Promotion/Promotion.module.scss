@@ -4,7 +4,7 @@
   height: 580px;
   background-color: $beige-100;
   width: 100vw;
-  margin-left: -1.5rem;
+  margin-left: -1rem;
   margin-top: 4rem;
   font-family: $font-tertiary;
   padding: 4rem 2rem;
@@ -14,7 +14,8 @@
 
   @media screen and (min-width: 300px) and (max-width: 600px) {
     height: fit-content;
-    margin-left: -1rem;
+    margin-left: 0;
+    padding: 2rem;
   }
 
   .redmail-tag {
@@ -31,6 +32,17 @@
   .content-title {
     font-size: 60px;
     margin-top: 2rem;
+
+    @media screen and (min-width: 300px) and (max-width: 400px) {
+      font-size: 50px;
+      line-height: 60px;
+      margin-top: 1rem;
+    }
+    @media screen and (min-width: 400px) and (max-width: 600px) {
+      font-size: 54px;
+      line-height: 64px;
+      margin-top: 1rem;
+    }
   }
 
   .blocks-container {

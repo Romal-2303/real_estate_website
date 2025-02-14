@@ -3,13 +3,19 @@
   gap: 1rem;
   margin-top: 3rem;
   padding: 0rem 1.5rem;
+  overflow-x: scroll;
 
   .tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid black;
     border-radius: 20px;
     padding: 0.5rem 0.8rem;
     font-size: 12px;
     font-weight: 500;
+    width: fit-content;
+    white-space: nowrap;
     cursor: pointer;
   }
 

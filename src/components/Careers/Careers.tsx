@@ -1,8 +1,8 @@
 import LocationIcon from "@/assets/icons/Location";
-import classes from "./Careers.module.scss";
 import ClockIcon from "@/assets/icons/ClockIcon";
 import TagsContainer from "./TagsContainer/TagsContainer";
 import ArrowWithTail from "@/assets/icons/ArrowWithTail";
+import classes from "./Careers.module.scss";
 
 let careersArr = [
   {
@@ -94,10 +94,10 @@ const Careers = () => {
                 <p className={classes["job-desc"]}>{job.desc}</p>
                 <div className={classes["job-list-tag-container"]}>
                   <div className={classes["remote-tag"]}>
-                    <LocationIcon /> 100% remote
+                    <LocationIcon /> <span>100% remote</span>
                   </div>
                   <div className={classes["full-time-tag"]}>
-                    <ClockIcon /> Full-time
+                    <ClockIcon /> <span>Full-time</span>
                   </div>
                 </div>
               </div>

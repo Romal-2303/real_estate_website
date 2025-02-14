@@ -1,0 +1,72 @@
+@use "../../designSystem/library" as *;
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  width: 100%;
+
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    margin-top: 3rem;
+  }
+
+  .images-container {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: calc(100vw - 3rem);
+    gap: 3rem;
+    overflow: hidden;
+    position: relative;
+
+    .image-container {
+      position: absolute;
+      height: 300px;
+      width: 400px;
+      transition: all linear 0.5s;
+
+      img {
+        height: 100%;
+        width: 400px;
+        border-radius: 25px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+    }
+
+    .image-container-active {
+      transition: all linear 0.5s;
+      height: 500px;
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  .controller-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    .controller-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      height: 50px;
+      width: 100px;
+      border-radius: 25px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.148);
+      }
+    }
+  }
+}
