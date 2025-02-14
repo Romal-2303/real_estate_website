@@ -8,10 +8,24 @@
   font-family: $font-tertiary;
   padding-left: 2rem;
 
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    border-top-right-radius: 0px;
+    padding-left: 1rem;
+  }
+
   .homepage-header {
     padding-top: 6rem;
     font-size: 74px;
     letter-spacing: 2px;
+
+    @media screen and (min-width: 300px) and (max-width: 400px) {
+      font-size: 50px;
+      padding-top: 3rem;
+    }
+    @media screen and (min-width: 400px) and (max-width: 600px) {
+      padding-top: 3rem;
+      font-size: 54px;
+    }
 
     span {
       color: $primary-200;
@@ -28,6 +42,13 @@
   .tags-input-container {
     width: 400px;
     margin-top: 4rem;
+
+    @media screen and (min-width: 300px) and (max-width: 400px) {
+      width: 90%;
+    }
+    @media screen and (min-width: 400px) and (max-width: 600px) {
+      width: 350px;
+    }
 
     .tags-container {
       display: flex;
@@ -85,15 +106,32 @@
     width: 500px;
     margin-top: 2rem;
 
+    @media screen and (min-width: 300px) and (max-width: 400px) {
+      width: 100%;
+      margin-top: 1rem;
+    }
+    @media screen and (min-width: 400px) and (max-width: 600px) {
+      width: 390px;
+      margin-top: 1rem;
+    }
+
     .quote-text {
       position: absolute;
       bottom: 0%;
-      left: 5%;
+      left: 0%;
       width: 100%;
       background-color: transparent;
       color: $gray-1300;
       line-height: 24px;
       letter-spacing: 1px;
+
+      @media screen and (min-width: 300px) and (max-width: 600px) {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.8px;
+        width: 90%;
+        bottom: 10%;
+      }
     }
   }
 }

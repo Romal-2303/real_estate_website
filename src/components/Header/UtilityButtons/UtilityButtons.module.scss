@@ -1,3 +1,5 @@
+@use "../../../designSystem/library" as *;
+
 .utility-btn-container {
   background-color: white;
   height: 100%;
@@ -9,7 +11,100 @@
   padding-top: 0.4rem;
   padding-right: 2rem;
 
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    display: none;
+  }
+
   p {
     cursor: pointer;
+  }
+}
+
+.menu-icon-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.menu-container {
+  background-color: white;
+  height: 80vh;
+  width: 90%;
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 11111;
+  border-radius: 4px;
+  padding: 1rem 1rem 3rem 1rem;
+
+  .signin-sigup-btn-container-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 12;
+    padding: 0rem 1.5rem;
+    margin-top: 1rem;
+
+    button {
+      border: none;
+      background: none;
+      font-weight: 500;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .sign-in-btn {
+      color: black;
+      border: 1px solid black;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      white-space: nowrap;
+      flex: 1;
+      transition: background-color linear 0.2s;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.142);
+      }
+    }
+
+    .sign-up-btn {
+      border-radius: 12px;
+      padding: 0.8rem 1.4rem;
+      transition: background-color linear 0.2s;
+      color: rgb(255, 255, 255);
+      background-color: $gray-200;
+      border: 1px solid black;
+      white-space: nowrap;
+      flex: 1;
+
+      &:hover {
+        background-color: rgba(36, 36, 34, 0.9);
+      }
+    }
+  }
+
+  .menu-content-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    .link-container {
+      margin-top: 1.5rem;
+      text-decoration: none;
+      color: black;
+    }
+
+    .horizontal-separator {
+      height: 1px;
+      width: 100%;
+      margin-top: 0.5rem;
+      background-color: $black-100;
+    }
   }
 }

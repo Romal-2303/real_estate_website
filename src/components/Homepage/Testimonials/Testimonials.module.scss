@@ -1,12 +1,29 @@
 @use "../../../designSystem/library" as *;
 
 .testimonials-container {
-  margin-top: 4rem;
+  margin: 4rem 0rem 3rem 0rem;
   font-family: $font-tertiary;
+
+  @media screen and (min-width: 300px) and (max-width: 400px) {
+    margin-top: 3rem;
+  }
+  @media screen and (min-width: 400px) and (max-width: 600px) {
+    margin-top: 3rem;
+  }
 
   .testimonials-title {
     text-align: center;
     font-size: 54px;
+
+    @media screen and (min-width: 300px) and (max-width: 400px) {
+      text-align: start;
+      font-size: 50px;
+    }
+    @media screen and (min-width: 400px) and (max-width: 600px) {
+      text-align: start;
+      font-size: 54px;
+    }
+
     span {
       color: $gray-1300;
     }
@@ -17,6 +34,16 @@
     height: 550px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: 300px) and (max-width: 400px) {
+      height: 470px;
+      margin-top: 2rem;
+    }
+
+    @media screen and (min-width: 400px) and (max-width: 600px) {
+      height: 470px;
+      margin-top: 2rem;
+    }
 
     .bended-carousel-section {
       position: relative;
@@ -41,6 +68,14 @@
         padding: 2rem;
         display: flex;
         flex-direction: column;
+
+        @media screen and (min-width: 300px) and (max-width: 400px) {
+          width: 330px;
+        }
+
+        @media screen and (min-width: 400px) and (max-width: 600px) {
+          width: 370px;
+        }
 
         .user-testimony {
           line-height: 24px;

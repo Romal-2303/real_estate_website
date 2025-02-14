@@ -123,52 +123,106 @@ const FindHome = () => {
       </div>
 
       <div className={classes["cards-container"]}>
-        {cardsArr.map((cardEl, cardIndex) => (
-          <div key={cardIndex} className={classes["card"]}>
-            <div className={classes["image-container"]}>
-              <img src={cardEl.house} />
-              <div className={classes["property-tag"]}>{cardEl.status}</div>
-            </div>
-            <div className={classes["card-content-container"]}>
-              <p className={classes["proeprty-name"]}>{cardEl.title}</p>
+        {/* {isMobile ? (
+          <>
+            {cardsArr.map((cardEl, cardIndex) => (
+              <div key={cardIndex} className={classes["card"]}>
+                <div className={classes["image-container"]}>
+                  <img src={cardEl.house} />
+                  <div className={classes["property-tag"]}>{cardEl.status}</div>
+                </div>
+                <div className={classes["card-content-container"]}>
+                  <p className={classes["proeprty-name"]}>{cardEl.title}</p>
 
-              <p className={classes["property-location"]}>
-                <LocationIcon /> {cardEl.location}
-              </p>
+                  <p className={classes["property-location"]}>
+                    <LocationIcon /> {cardEl.location}
+                  </p>
 
-              <div className={classes["horizontal-separator"]}></div>
+                  <div className={classes["horizontal-separator"]}></div>
 
-              <div className={classes["property-details-container"]}>
-                <p>
-                  <BedIcon />
-                  {cardEl.beds} beds
-                </p>
-                <p>
-                  <BedIcon />
-                  {cardEl.baths} baths
-                </p>
-                <p>
-                  <BedIcon />
-                  {cardEl.area} sqft
-                </p>
+                  <div className={classes["property-details-container"]}>
+                    <p>
+                      <BedIcon />
+                      {cardEl.beds} beds
+                    </p>
+                    <p>
+                      <BedIcon />
+                      {cardEl.baths} baths
+                    </p>
+                    <p>
+                      <BedIcon />
+                      {cardEl.area} sqft
+                    </p>
+                  </div>
+
+                  <div className={classes["price-btn-container"]}>
+                    <p className={classes["price"]}>{cardEl.price}</p>
+                    <Button
+                      btnStyle={{
+                        padding: "0.5rem 0rem",
+                        width: "110px",
+                        fontSize: "12px",
+                        backgroundColor: "#fea828",
+                      }}
+                    >
+                      View Details
+                    </Button>
+                  </div>
+                </div>
               </div>
+            ))}
+          </>
+        ) : ( */}
+        <>
+          {" "}
+          {cardsArr.map((cardEl, cardIndex) => (
+            <div key={cardIndex} className={classes["card"]}>
+              <div className={classes["image-container"]}>
+                <img src={cardEl.house} />
+                <div className={classes["property-tag"]}>{cardEl.status}</div>
+              </div>
+              <div className={classes["card-content-container"]}>
+                <p className={classes["proeprty-name"]}>{cardEl.title}</p>
 
-              <div className={classes["price-btn-container"]}>
-                <p className={classes["price"]}>{cardEl.price}</p>
-                <Button
-                  btnStyle={{
-                    padding: "0.5rem 0rem",
-                    width: "110px",
-                    fontSize: "12px",
-                    backgroundColor: "#fea828",
-                  }}
-                >
-                  View Details
-                </Button>
+                <p className={classes["property-location"]}>
+                  <LocationIcon /> {cardEl.location}
+                </p>
+
+                <div className={classes["horizontal-separator"]}></div>
+
+                <div className={classes["property-details-container"]}>
+                  <p>
+                    <BedIcon />
+                    {cardEl.beds} beds
+                  </p>
+                  <p>
+                    <BedIcon />
+                    {cardEl.baths} baths
+                  </p>
+                  <p>
+                    <BedIcon />
+                    {cardEl.area} sqft
+                  </p>
+                </div>
+
+                <div className={classes["price-btn-container"]}>
+                  <p className={classes["price"]}>{cardEl.price}</p>
+                  <Button
+                    btnStyle={{
+                      padding: "0.5rem 0rem",
+                      width: "110px",
+                      fontSize: "12px",
+                      backgroundColor: "#fea828",
+                    }}
+                  >
+                    View Details
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </>
+        {/* )} */}
       </div>
 
       <Button

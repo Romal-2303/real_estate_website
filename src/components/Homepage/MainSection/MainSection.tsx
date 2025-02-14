@@ -5,10 +5,12 @@ import BuildingAnimation from "@/components/Homepage/BuildingAnimation/BuildingA
 import Search from "@/assets/icons/Search";
 import Quote from "@/assets/icons/Quote";
 import { useState } from "react";
+import useIsMobile from "@/hooks/useIsMobile";
 
 let tagArr = ["Buy", "Rent", "Sell"];
 
 const MainSection = () => {
+  const isMobile = useIsMobile(650);
   const [activeTag, setActivetag] = useState(0);
 
   const tagClickHandler = (receivedIndex: number) => () => {
@@ -21,9 +23,11 @@ const MainSection = () => {
         Connecting you <span>to the</span> <br /> <span>home</span> you love
       </h1>
 
-      <div className={classes["building-container"]}>
-        <BuildingAnimation />
-      </div>
+      {!isMobile && (
+        <div className={classes["building-container"]}>
+          <BuildingAnimation />
+        </div>
+      )}
 
       <div className={classes["tags-input-container"]}>
         <div className={classes["tags-container"]}>
@@ -52,11 +56,19 @@ const MainSection = () => {
       <div className={classes["quote-container"]}>
         <div className={classes["quote-icon-container"]}>
           <Quote color="#f1f1ee" height="130" width="130" />
-          <p className={classes["quote-text"]}>
-            "Your dream home is closer than you think, where
-            <br /> every space tells a story. Let’s find the key to <br />
-            your perfect future."
-          </p>
+
+          {isMobile ? (
+            <p className={classes["quote-text"]}>
+              "Your dream home is closer than you think, where every space tells
+              a story. Let’s find the key to your perfect future."
+            </p>
+          ) : (
+            <p className={classes["quote-text"]}>
+              "Your dream home is closer than you think, where
+              <br /> every space tells a story. Let’s find the key to <br />
+              your perfect future."
+            </p>
+          )}
         </div>
       </div>
     </div>

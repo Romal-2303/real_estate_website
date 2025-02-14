@@ -8,6 +8,11 @@
   background-color: $primary-100;
   border-top-left-radius: 20px;
 
+  @media screen and (min-width: 300px) and (max-width: 600px) {
+    border-top-right-radius: 20px;
+    align-items: center;
+  }
+
   .logo-container {
     display: flex;
     align-items: center;
@@ -16,8 +21,18 @@
   }
   .nav-panel-wrapper {
     flex: 1.5;
+
+    @media screen and (min-width: 300px) and (max-width: 600px) {
+      display: none;
+    }
   }
   .utility-buttons-wrapper {
     flex: 1.9;
+
+    @media screen and (min-width: 300px) and (max-width: 600px) {
+      flex: 1;
+      display: flex;
+      justify-content: end;
+    }
   }
 }

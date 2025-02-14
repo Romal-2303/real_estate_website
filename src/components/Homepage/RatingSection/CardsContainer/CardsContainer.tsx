@@ -2,7 +2,8 @@
 import ExploreIcon from "@/assets/icons/ExploreIcon";
 import classes from "./CardsContainer.module.scss";
 import styles from "../../../../designSystem/_classes.module.scss";
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
+import useIsMobile from "@/hooks/useIsMobile";
 
 let cardArr = [
   {
@@ -28,6 +29,7 @@ let cardArr = [
 ];
 
 const CardsContainer = () => {
+  const isMobile = useIsMobile(650);
   const trackRef = useRef<HTMLDivElement>(null);
   const thumbRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -101,34 +103,57 @@ const CardsContainer = () => {
   };
 
   return (
-    <div className={classes["cards-container-wrapper"]}>
-      <div className={classes["scroll-container"]}>
-        <div className={classes["scroll-bar-bg"]} ref={trackRef}>
+    <Fragment>
+      {isMobile ? (
+        <div className={classes["cards-container-wrapper"]}>
           <div
-            className={classes["scroll-bar"]}
-            onMouseUp={mouseUpHandler}
-            onMouseDown={mouseDownHandler}
-            style={{ transform: `translate(-50%, ${scrollPosition}px)` }}
-          ></div>
-        </div>
-      </div>
-      <div
-        id="scroll-container-unique"
-        className={`${classes["cards-container"]}  ${styles["hide-scrollbar"]}`}
-        ref={containerRef}
-        onScroll={onContainerScroll}
-      >
-        {cardArr.map((el, index) => (
-          <div key={index} className={classes["card-container"]}>
-            <div className={classes["card-header"]}>
-              <div className={classes["icon-container"]}>{el.icon}</div>
-              <p>{el.title}</p>
-            </div>
-            <p className={classes["card-desc"]}>{el.desc}</p>
+            id="scroll-container-unique"
+            className={`${classes["cards-container"]}  ${styles["hide-scrollbar"]}`}
+            ref={containerRef}
+            onScroll={onContainerScroll}
+          >
+            {cardArr.map((el, index) => (
+              <div key={index} className={classes["card-container"]}>
+                <div className={classes["card-header"]}>
+                  <div className={classes["icon-container"]}>{el.icon}</div>
+                  <p>{el.title}</p>
+                </div>
+                <p className={classes["card-desc"]}>{el.desc}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      ) : (
+        <div className={classes["cards-container-wrapper"]}>
+          <div className={classes["scroll-container"]}>
+            <div className={classes["scroll-bar-bg"]} ref={trackRef}>
+              <div
+                className={classes["scroll-bar"]}
+                onMouseUp={mouseUpHandler}
+                onMouseDown={mouseDownHandler}
+                style={{ transform: `translate(-50%, ${scrollPosition}px)` }}
+              ></div>
+            </div>
+          </div>
+          <div
+            id="scroll-container-unique"
+            className={`${classes["cards-container"]}  ${styles["hide-scrollbar"]}`}
+            ref={containerRef}
+            onScroll={onContainerScroll}
+          >
+            {cardArr.map((el, index) => (
+              <div key={index} className={classes["card-container"]}>
+                <div className={classes["card-header"]}>
+                  <div className={classes["icon-container"]}>{el.icon}</div>
+                  <p>{el.title}</p>
+                </div>
+                <p className={classes["card-desc"]}>{el.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </Fragment>
   );
 };
 

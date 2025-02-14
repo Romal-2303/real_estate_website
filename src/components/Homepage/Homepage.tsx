@@ -11,7 +11,7 @@ const Homepage = () => {
       <RatingSection />
       <FindHome />
       <Testimonials />
-      <BrighterDaysComponent/>
+      {/* <BrighterDaysComponent /> */}
     </>
   );
 };

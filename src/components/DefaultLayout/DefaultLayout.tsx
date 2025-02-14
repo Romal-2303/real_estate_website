@@ -6,7 +6,7 @@ import CookieContainer from "../CookieContainer/CookieContainer";
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={classes["default-layout"]}>
-      <CookieContainer/>
+      <CookieContainer />
       <Header />
       {children}
       <Footer />
