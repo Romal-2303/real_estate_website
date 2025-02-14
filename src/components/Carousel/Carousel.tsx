@@ -3,7 +3,6 @@
 import ArrowWithTail from "@/assets/icons/ArrowWithTail";
 import classes from "./Carousel.module.scss";
 import { useState } from "react";
-import AliceCarousel from "react-alice-carousel";
 import useIsMobile from "@/hooks/useIsMobile";
 
 interface CarouselProps {
